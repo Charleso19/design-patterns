@@ -1,18 +1,18 @@
 package singleton.not.thread.safe.eager;
 
-public class DbSingleton {
+public class Singleton {
     /*
      * Static at the moment means it is not currently threadsafe.
      * Also, it is currently eagerly loaded: the instance is created at start-up,
      * regardless of whether we use it. A better example is to use lazy-loading.
      */
-    private static final DbSingleton instance = new DbSingleton();
+    private static final Singleton instance = new Singleton();
 
-    private DbSingleton() {
+    private Singleton() {
     }
 
     // getInstance naming of method is customary in Singleton pattern
-    public static DbSingleton getInstance() {
+    public static Singleton getInstance() {
         return instance;
     }
 }

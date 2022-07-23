@@ -3,20 +3,20 @@ package singleton.thread.safe.lazy;
 /**
  * Double locking mechanism version of singleton.
  */
-public class DbSingleton {
+public class Singleton {
 
     // volatile prevents cache incoherence issues.
-    private static volatile DbSingleton instance;
+    private static volatile Singleton instance;
 
-    private DbSingleton() {
+    private Singleton() {
     }
 
     /*
      * Could make the method synchronised, but this is a performance hit:
      *
-     *     public static synchronized DbSingleton getInstance() {
+     *     public static synchronized Singleton getInstance() {
      *         if (instance == null) {
-     *             instance = new DbSingleton();
+     *             instance = new Singleton();
      *         }
      *         return instance;
      *
@@ -25,11 +25,11 @@ public class DbSingleton {
      * singleton. We can see that is already much more efficient than requiring the lock each
      * time getInstance is called.
      */
-    public static DbSingleton getInstance() {
+    public static Singleton getInstance() {
         if (instance == null) {
-            synchronized (DbSingleton.class) {
+            synchronized (Singleton.class) {
                 if (instance == null) {
-                    instance = new DbSingleton();
+                    instance = new Singleton();
                 }
             }
         }

@@ -1,16 +1,16 @@
 package singleton.not.thread.safe.lazy;
 
-public class DbSingleton {
+public class Singleton {
 
     // Static at the moment means it is not currently threadsafe.
-    private static DbSingleton instance;
+    private static Singleton instance;
 
-    private DbSingleton() {
+    private Singleton() {
     }
 
     /*
      * getInstance naming of method is customary in Singleton pattern.
-     * Also, compared to singleton.not.thread.safe.eager.DbSingleton, this object
+     * Also, compared to singleton.not.thread.safe.eager.Singleton, this object
      * is lazily loaded: the singleton is only initialised when (or if) the getInstance
      * method is called, and not at JVM start-up.
      *
@@ -18,9 +18,9 @@ public class DbSingleton {
      * at start-up, it could take a considerable amount of time. Using the lazy loading
      * reduces this load at start-up.
      */
-    public static DbSingleton getInstance() {
+    public static Singleton getInstance() {
         if (instance == null) {
-            instance = new DbSingleton();
+            instance = new Singleton();
         }
         return instance;
     }
