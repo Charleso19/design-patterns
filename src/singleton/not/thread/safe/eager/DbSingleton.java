@@ -1,4 +1,4 @@
-package singleton;
+package singleton.not.thread.safe.eager;
 
 public class DbSingleton {
     /*
@@ -9,7 +9,6 @@ public class DbSingleton {
     private static final DbSingleton instance = new DbSingleton();
 
     private DbSingleton() {
-
     }
 
     // getInstance naming of method is customary in Singleton pattern

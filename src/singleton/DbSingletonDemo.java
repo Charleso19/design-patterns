@@ -1,5 +1,7 @@
 package singleton;
 
+import singleton.not.thread.safe.eager.DbSingleton;
+
 public class DbSingletonDemo {
 
     public static void main(String[] args) {
