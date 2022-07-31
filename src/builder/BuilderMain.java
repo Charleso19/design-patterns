@@ -33,9 +33,9 @@ public class BuilderMain {
                 .setCondiments("Sandwich Spread")
                 .setDressing("Mayo")
                 .setMeat("Turkey");
-        System.out.println(lunchOrder.getBread()); // Prints Brown
+        System.out.println(lunchOrderBean.getBread()); // Prints Brown
         lunchOrderBean.setBread("White");
-        System.out.println(lunchOrder.getBread()); // Prints White
+        System.out.println(lunchOrderBean.getBread()); // Prints White
 
         // Telescoping constructors are mutable, but can be difficult to implement edge-case construction without creating one for each variant.
         final LunchOrderTele lunchOrderTele = new LunchOrderTele("White", null, null, "Ham");

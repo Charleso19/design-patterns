@@ -54,22 +54,22 @@ public class LunchOrder {
 
         public LunchOrderBuilder bread(final String bread) {
             LunchOrderBuilder.this.bread = bread;
-            return this;
+            return LunchOrderBuilder.this;
         }
 
         public LunchOrderBuilder condiments(final String condiments) {
             LunchOrderBuilder.this.condiments = condiments;
-            return this;
+            return LunchOrderBuilder.this;
         }
 
         public LunchOrderBuilder dressing(final String dressing) {
             LunchOrderBuilder.this.dressing = dressing;
-            return this;
+            return LunchOrderBuilder.this;
         }
 
         public LunchOrderBuilder meat(final String meat) {
             LunchOrderBuilder.this.meat = meat;
-            return this;
+            return LunchOrderBuilder.this;
         }
     }
 }
